@@ -45,10 +45,6 @@ describe('regex', function () {
       `BANANAS ARE GREEN OR YELLOW`
     )
     assert.ok(
-      !anchor_end(`THIS SHIITAKE IS BANANAS`),
-      `THIS SHIITAKE IS BANANAS`
-    )
-    assert.ok(
       !anchor_end(`NOTHING`),
       `NOTHING`
     )
@@ -103,7 +99,7 @@ describe('regex', function () {
   })
 
   it('匹配开头非数字，第二个字符非大写字母', function () {
-    const negated_char_class = require('../lib/char_class')
+    const negated_char_class = require('../lib/negated_char_class')
     assert.ok(
       !negated_char_class(`1A`),
       `1A`
